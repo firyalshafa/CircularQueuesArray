@@ -64,10 +64,44 @@ public:
 		}
 	}
 
+	void display() {
+		int FRONT_position = FRONT;
+		int REAR_position = REAR;
+
+		//cek apakah antrian kosong 
+		if (FRONT_position == -1) {
+			cout << "queue is empty\n";
+			return;
+		}
+		cout << "\nelements in the queue are ...\n";
+		// jika front <= rear, iterasi dari front hingga rear
+		if (FRONT_position <= REAR_position) {
+			while (FRONT_position <= REAR_position) {
+				cout << queue_array[FRONT_position] << "  ";
+				FRONT_position++;
+			}
+
+			FRONT_position = 0;
+
+			// iterasi front >rear,iterasi dari front hingga akhir array 
+			while (FRONT_position <= max - 1) {
+				cout << queue_array[FRONT_position] << "  ";
+				FRONT_position++;
+			}
+
+			FRONT_position = 0;
+			
+			//iterasi dari awal array hingga akhir rear
+			while (FRONT_position <= REAR_position) {
+				cout << queue_array[FRONT_position] << "  ";
+				FRONT_position++;
+			}
+			cout << endl;
+		}
+	}
+
 
 };
-
-
 
 int main()
 {
