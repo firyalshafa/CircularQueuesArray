@@ -115,6 +115,7 @@ int main()
 			cout << "2. implement delete operation" << endl;
 			cout << "3. dispaly values " << endl;
 			cout << "4. exit " << endl;
+			cout << "Enter your choice (1-4): " << endl;
 			cin >> ch;
 			cout << endl;
 
